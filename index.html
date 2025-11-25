@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZenFlex — студия растяжки и йоги</title>
+
+  <!-- Web font (опционально) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Главная ZenFlex">ZENFLEX</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Главное меню">
+        <ul>
+          <li><a href="#programs">Программы</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Тема">
+          ☼
+        </button>
+
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="burger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile nav -->
+    <nav id="mobileMenu" class="mobile-nav" role="navigation" aria-label="Мобильное меню" hidden>
+      <ul>
+        <li><a href="#programs">Программы</a></li>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Главный баннер">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="display">ZENFLEX</h1>
+          <p class="lead">Студия растяжки и мягкой йоги</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-open-modal="signupModal">Присоединиться к занятиям</button>
+            <a href="#programs" class="btn ghost">Наши программы</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure" aria-hidden="true">
+          <!-- local file path as requested -->
+          <img src="/mnt/data/27856C5C-376D-4F21-ADB9-5C8FE23FC039.jpeg" alt="Женщина выполняет растяжку" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section programs" aria-labelledby="programsTitle">
+      <div class="container">
+        <h2 id="programsTitle">Направления и программы тренировок</h2>
+
+        <div class="programs-grid">
+          <!-- Accordion: mobile-first simple accordion for program items -->
+          <article class="program card" aria-labelledby="p1Title">
+            <button class="accordion-toggle" aria-expanded="false" aria-controls="p1Content" id="p1Title">Йога с нуля</button>
+            <div id="p1Content" class="accordion-panel" role="region" aria-labelledby="p1Title">
+              <ul>
+                <li>Основы йоги</li>
+                <li>Продвинутые асаны</li>
+                <li>Группы до 8 человек</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="program card" aria-labelledby="p2Title">
+            <button class="accordion-toggle" aria-expanded="false" aria-controls="p2Content" id="p2Title">Йога PRO</button>
+            <div id="p2Content" class="accordion-panel" role="region" aria-labelledby="p2Title">
+              <ul>
+                <li>Сложные элементы</li>
+                <li>Базовые асаны</li>
+                <li>Группы до 8 человек</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="program-figure card">
+            <img src="/mnt/data/27856C5C-376D-4F21-ADB9-5C8FE23FC039.jpeg" alt="Асана" />
+          </div>
+
+          <article class="program card" aria-labelledby="p3Title">
+            <button class="accordion-toggle" aria-expanded="false" aria-controls="p3Content" id="p3Title">Растяжка</button>
+            <div id="p3Content" class="accordion-panel" role="region" aria-labelledby="p3Title">
+              <ul>
+                <li>Основы растяжки</li>
+                <li>Продвинутые асаны</li>
+                <li>Группы до 8 человек</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="program card" aria-labelledby="p4Title">
+            <button class="accordion-toggle" aria-expanded="false" aria-controls="p4Content" id="p4Title">Медитация</button>
+            <div id="p4Content" class="accordion-panel" role="region" aria-labelledby="p4Title">
+              <ul>
+                <li>Сложные элементы йоги</li>
+                <li>Базовые асаны</li>
+                <li>Группы до 8 человек</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prices (tabs) -->
+    <section id="prices" class="section prices" aria-labelledby="pricesTitle">
+      <div class="container">
+        <h2 id="pricesTitle">Стоимость и абонементы</h2>
+
+        <div class="tabs">
+          <div class="tabs-nav" role="tablist" aria-label="Планы абонементов">
+            <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab1" id="tabbtn1">1 занятие</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab2" id="tabbtn2">Пакет 8 занятий</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab3" id="tabbtn3">Пакет 16 занятий</button>
+          </div>
+
+          <div class="tabs-panels">
+            <div id="tab1" role="tabpanel" aria-labelledby="tabbtn1" class="tab-panel active">
+              <div class="price-card card">
+                <h3>1 занятие</h3>
+                <p class="price">700₽ / занятие</p>
+                <ul>
+                  <li>60 минут растяжки</li>
+                  <li>Медитация</li>
+                </ul>
+                <button class="btn primary" data-open-modal="signupModal">Присоединиться</button>
+              </div>
+            </div>
+
+            <div id="tab2" role="tabpanel" aria-labelledby="tabbtn2" class="tab-panel">
+              <div class="price-card card">
+                <h3>Пакет из 8 занятий</h3>
+                <p class="price">500₽ / занятие</p>
+                <ul>
+                  <li>60 минут растяжки</li>
+                  <li>Медитация</li>
+                </ul>
+                <button class="btn primary" data-open-modal="signupModal">Купить пакет</button>
+              </div>
+            </div>
+
+            <div id="tab3" role="tabpanel" aria-labelledby="tabbtn3" class="tab-panel">
+              <div class="price-card card highlight">
+                <h3>Пакет из 16 занятий</h3>
+                <p class="price">350₽ / занятие</p>
+                <ul>
+                  <li>60 минут растяжки</li>
+                  <li>Медитация</li>
+                </ul>
+                <button class="btn primary" data-open-modal="signupModal">Купить пакет</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / contacts -->
+    <footer id="contacts" class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div>
+          <h4>ZENFLEX</h4>
+          <address>Адрес: Водушная ул., д. 99</address>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <p>Телефон: +7 (777) 777 77 77</p>
+        </div>
+        <div>
+          <h4>Политика</h4>
+          <p><a href="#" class="link">Договор оферты</a></p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal (signup) -->
+  <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="signupTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Закрыть модальное окно" data-close-modal>✕</button>
+      <h3 id="signupTitle">Записаться на занятие</h3>
+      <form id="signupForm">
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 ..." required />
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Отправить</button>
+          <button type="button" class="btn ghost" data-close-modal>Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
